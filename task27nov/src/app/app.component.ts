@@ -10,10 +10,4 @@ export class AppComponent {
   val: string = 'Sachin sisodiya'; 
   // value for currentItem to the child so that item renders as Television.
   currentItem = 'Television';
-
-  items = ['item1', 'item2', 'item3', 'item4'];
-
-  addItem(newItem: string) {
-    this.items.push(newItem);
-  }
 }
