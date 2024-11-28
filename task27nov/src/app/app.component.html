@@ -1,6 +1,7 @@
-<app-navbar></app-navbar>
+<!--the item decorator calls the iput method from child componatent -->
+<app-navbar ></app-navbar>
 <app-sidebar></app-sidebar>
-<app-home></app-home>
+<app-home [item]="currentItem">  </app-home>
 <app-section1></app-section1>
 <app-section2></app-section2>
 <app-section3></app-section3>

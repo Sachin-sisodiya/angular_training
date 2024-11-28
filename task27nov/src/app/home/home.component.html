@@ -3,15 +3,22 @@
     <!-- Header -->
         <header id="header">
             <div class="content">
-                <h1><a href="#">Fractal</a></h1>
+                <!--one way binding-->
+                <h1><a href="#">{{val}}</a></h1>
                 <p>Just a simple, single page responsive<br />
                 template brought to you by <a href="http://html5up.net">HTML5 UP</a></p>
                 <ul class="actions">
                     <li><a href="#" class="button primary icon solid fa-download">Download</a></li>
-                    <li><a href="#one" class="button icon solid fa-chevron-down scrolly">Learn More</a></li>
-                </ul>
+                    <li>
+                        <!--calling input method-->
+                       
+                    </li>
+                    <li><label for="item-input"> Today's item: {{item}}</label>
+                        <input type="text" id="item-input" #newItem>
+                        <!--this funcitonality is used to add item in parent list-->
+                        <button type="button" >Add item </button></li> </ul>
             </div>
-            <div class="image phone"><div class="inner"><img src="../../assets/images/screen.jpg" alt="no image to display" /></div></div>
+            <div class="image phone"><div class="inner"><img [src]="image" alt="no image to display" /></div></div>
         </header>
 
     
