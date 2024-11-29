@@ -1,0 +1,11 @@
+<div [ngSwitch]="selectedColor">
+    <div *ngSwitchCase="'red'">Red Color Selected</div>
+    <div *ngSwitchCase="'green'">Green Color Selected</div>
+    <div *ngSwitchCase="'blue'">Blue Color Selected</div>
+    <div *ngSwitchDefault>Choose a color</div>
+  </div>
+  
+  <button (click)="selectColor('red')">Red</button>
+  <button (click)="selectColor('green')">Green</button>
+  <button (click)="selectColor('blue')">Blue</button>
+   

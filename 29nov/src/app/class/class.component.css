@@ -1,0 +1,7 @@
+/* CSS to apply the highlight effect */
+.highlight {
+    background-color: yellow; /* Set background color to yellow */
+    font-weight: bold;         /* Make text bold */
+    color: red;                /* Set text color to red */
+  }
+  
