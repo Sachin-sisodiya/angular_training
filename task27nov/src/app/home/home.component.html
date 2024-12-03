@@ -1,26 +1,33 @@
-<body class="is-preload">
+
 
     <!-- Header -->
-        <header id="header">
-            <div class="content">
-                <!--one way binding-->
-                <h1><a href="#">{{val}}</a></h1>
-                <p>Just a simple, single page responsive<br />
-                template brought to you by <a href="http://html5up.net">HTML5 UP</a></p>
-                <ul class="actions">
-                    <li><a href="#" class="button primary icon solid fa-download">Download</a></li>
-                    <li>
-                        <!--calling input method-->
-                       
-                    </li>
-                    <li><label for="item-input"> Today's item: {{item}}</label>
-                        <input type="text" id="item-input" #newItem>
-                        <!--this funcitonality is used to add item in parent list-->
-                        <button type="button" >Add item </button></li> </ul>
+    <header id="header" class="text-white py-5">
+        <div class="container text-center">
+            <!-- One way binding -->
+            <h1><a href="#" class="text-white">{{val}}</a></h1>
+            <p class="lead">Just a simple, single page responsive<br />
+                template brought to you by <a href="http://html5up.net" class="text-info">HTML5 UP</a>
+            </p>
+            <ul class="list-unstyled d-inline-flex">
+                <li class="mr-3">
+                    <a href="#" class="btn btn-primary btn-lg icon solid fa-download">Download</a>
+                </li>
+                <li class="mr-3">
+                    <!-- Calling input method -->
+                </li>
+                <li>
+                    <label for="item-input">Today's item: {{item}}</label>
+                    <input type="text" id="item-input" class="form-control d-inline-block w-auto" #newItem>
+                    <!-- This functionality is used to add item in parent list -->
+                    
+                    <button type="button" class="btn btn-success">Success</button>
+                  
+                </li>
+            </ul>
+        </div>
+        <div class="image phone mt-sm-5 ">
+            <div class="d-grid justify-content-end ">
+                <img [src]="image" alt="No image to display" class="img-fluid"/>
             </div>
-            <div class="image phone"><div class="inner"><img [src]="image" alt="no image to display" /></div></div>
-        </header>
-
-    
-</body>
-
+        </div>
+    </header>

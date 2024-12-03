@@ -1,0 +1,34 @@
+/* Adjusting the sidebar width for different screen sizes */
+#sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+#sidebar .nav-link {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+}
+
+/* Add hover effect to sidebar links */
+#sidebar .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+/* Collapse the sidebar on smaller screens */
+@media (max-width: 767px) {
+    #sidebar {
+        width: 10%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    /* Adjust the content area for smaller screens */
+    main {
+        margin-left: 0;
+    }
+}

@@ -8,6 +8,7 @@ import { Section3Component } from './section3/section3.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     BrowserModule,
     FormsModule,
+    NgbModule,
    
   ],
   providers: [],
