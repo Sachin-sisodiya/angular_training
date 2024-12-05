@@ -2,4 +2,25 @@
 html {
     scroll-behavior: smooth;
   }
+  .success-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 16px;
+  }
+  
+  .success-box p {
+    margin: 0;
+  }
+  
+  .success-box.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
   

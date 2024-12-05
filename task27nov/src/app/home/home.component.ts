@@ -5,11 +5,18 @@ import { Output, EventEmitter } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
+
 export class HomeComponent {
   val: string = 'Sachin sisodiya'; 
   image = 
   "../../assets/images/screen.jpg";
 //part of parent child method 
   @Input() item = '';
- 
+
+  @Output() logout = new EventEmitter<void>();
+
+  onLogout(): void {
+    this.logout.emit();
+}
 }

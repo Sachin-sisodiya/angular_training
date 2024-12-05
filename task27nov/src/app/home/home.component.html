@@ -1,9 +1,6 @@
-
-
-    <!-- Header -->
-    <header id="header" class="text-white py-5">
+     <header id="header" class="text-white py-5">
         <div class="container text-center">
-            <!-- One way binding -->
+           
             <h1><a href="#" class="text-white">{{val}}</a></h1>
             <p class="lead">Just a simple, single page responsive<br />
                 template brought to you by <a href="http://html5up.net" class="text-info">HTML5 UP</a>
@@ -13,7 +10,7 @@
                     <a href="#" class="btn btn-primary btn-lg icon solid fa-download">Download</a>
                 </li>
                 <li class="mr-3">
-                    <!-- Calling input method -->
+                  
                 </li>
                 <li>
                     <label for="item-input">Today's item: {{item}}</label>
@@ -30,4 +27,8 @@
                 <img [src]="image" alt="No image to display" class="img-fluid"/>
             </div>
         </div>
+        <div class="home-container">
+            <h2>Welcome to the Home Page!</h2>
+            <button (click)="onLogout()">Logout</button>
+          </div>
     </header>

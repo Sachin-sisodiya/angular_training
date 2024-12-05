@@ -1,8 +1,27 @@
-<app-navbar></app-navbar>
+<!-- Show Register page when user is not registered -->
+<div *ngIf="!isRegistered && !isLoggedIn">
+  <app-signup (registerSuccess)="onRegisterSuccess($event)"></app-signup>
+</div>
 
-<!-- Sidebar and Main Content Section -->
-    <!-- Main content area -->
-      <app-home [item]="currentItem" id="home"></app-home>
-      <app-section1 id="section1"></app-section1>
-      <app-section2 id="section2"></app-section2>
-      <app-section3 id="section3"></app-section3>
+<!-- Show Login page after registration -->
+<div *ngIf="isRegistered && !isLoggedIn">
+  <app-login 
+    [registeredUser]="registeredUser"
+    (loginSuccess)="onLoginSuccess()"
+    (loginFailure)="onLoginFailure()"
+    (signUpRedirect)="onSignUpRedirect()"
+  ></app-login>
+</div>
+
+<!-- Show Home Page and Sections when user is logged in -->
+<div *ngIf="isLoggedIn">
+  <div *ngIf="isLoginSuccess" class="success-box">
+    <p>Login Successful!</p>
+  </div>
+
+  <app-navbar (logout)="onLogout()"></app-navbar>
+  <app-home></app-home>
+  <app-section1></app-section1>
+  <app-section2></app-section2>
+  <app-section3></app-section3>
+</div>
