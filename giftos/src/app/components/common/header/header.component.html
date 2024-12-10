@@ -1,0 +1,52 @@
+<header class="header_section">
+  <nav class="navbar navbar-expand-lg custom_nav-container">
+    <a class="navbar-brand" href="index.html">
+      <span>Giftos</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class=""></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link" [routerLink]="['/']">Home </a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['/shop']">Shop</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['/why']">Why Us</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['/client']">Testimonial</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['/contact']">Contact Us</a>
+          </li>
+      </ul>
+
+      <div class="user_option">
+        <!-- Show the login link if the user is not logged in -->
+        <a *ngIf="!username" routerLinkActive="active" [routerLink]="'/login'" class="nav-link">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <span>Login</span>
+        </a>
+        
+        <!-- Show the username and logout link if the user is logged in -->
+        <div *ngIf="username">
+          <span>Welcome, {{ username }}!</span>
+          <a href="javascript:void(0)" (click)="logout()" class="nav-link">Logout</a>
+        </div>
+
+        <a href="" class="nav-link">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        </a>
+        <form class="form-inline">
+          <button class="btn nav_search-btn" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
